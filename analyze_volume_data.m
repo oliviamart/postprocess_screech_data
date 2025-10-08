@@ -1,10 +1,10 @@
-function analyze_volume_data(start_tid, end_tid, rank, num_cores)
+function analyze_volume_data(start_tid, end_tid,dt, rank, num_cores)
 
 % Olivia Martin
 % Read in probe data and re-sample into a matrix
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Input parameters
+% INPUT PARAMETERS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % USE INDICES MAPPING IF ALREADY COMPUTED
@@ -14,12 +14,11 @@ indicesFilename = {'volume_data_output/volume_data_indices.mat'};
 % START / END / DT OF SAMPLING
 start_steps = [start_tid];
 end_steps = [end_tid];
-dt = 100;
 
 % PROBE NAMES 
 prefix = 'probe.';
 suffix = '.pcd';
-directories = {'../../run1/'}; % directories where probes are
+directories = {'../../'}; % directories where probes are
 points_files = 'probe.pbin';
 
 % MATLAB FILE WITH X,Y,Z POINT LOCATIONS
